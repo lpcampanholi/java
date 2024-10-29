@@ -15,22 +15,25 @@ public class ContaBancaria {
         System.out.println("Saldo inicial: ");
         double saldo = leitura.nextDouble();
 
-        int opcao;
+        System.out.println("*********************************");
+        System.out.println("Dados iniciais do cliente:");
+        System.out.println("Nome: " + nome);
+        System.out.println("Tipo de conta: " + tipoConta);
+        System.out.println("Saldo : " + saldo);
+        System.out.println("*********************************");
 
-        do {
-            System.out.println("*********************************");
-            System.out.println("Dados iniciais do cliente:");
-            System.out.println("Nome: " + nome);
-            System.out.println("Tipo de conta: " + tipoConta);
-            System.out.println("Saldo : " + saldo);
-            System.out.println("*********************************");
+        int opcao = 0;
+        String Menu = """
+                    Operações:
+                    1- Consultar saldo
+                    2- Receber valor
+                    3- Transferir valor
+                    4- Sair
+                    """;
 
-            System.out.println("Operações");
-            System.out.println("1- Consultar saldo");
-            System.out.println("2- Receber valor");
-            System.out.println("3- Transferir valor");
-            System.out.println("4- Sair");
+        while (opcao != 4) {
 
+            System.out.println(Menu);
             System.out.println("Digite a opcao desejada: ");
             opcao = leitura.nextInt();
 
@@ -61,8 +64,6 @@ public class ContaBancaria {
                     System.out.println("Opção inválida!");
                     break;
             }
-
-        } while (opcao != 4);
-
+        }
     }
 }
